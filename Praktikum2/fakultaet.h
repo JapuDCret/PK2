@@ -1,0 +1,2 @@
+int fakultaet(int n);
+
