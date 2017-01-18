@@ -9,7 +9,6 @@ namespace pk2 {
   private:
     Eminem* first;
     Eminem* last;
-    Iterator* iterator;
   
   public:
     /* Erzeugt eine leere Liste. */
@@ -75,7 +74,7 @@ namespace pk2 {
     void visit_all(void (*work)(const char* t));
     
     /* Erzeugt einen Iterator */
-    Iterator* getIterator() { return iterator; };
+    Iterator* iterator();
   };
 }
 

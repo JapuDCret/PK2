@@ -19,7 +19,7 @@ int main(){
   cout << "2" << endl;
   liste.append("Element 1");
   cout << "3" << endl;
-  liste.insert("Element 2", 2);
+  liste.insert("Element 2", 1);
   cout << "4" << endl;
   
   cout << "Liste:" << endl;
@@ -29,7 +29,7 @@ int main(){
   
   cout << "Liste:" << endl;
   liste.visit_all(ausgabe);
-  liste.remove(2);
+  liste.remove(1);
   
   cout << "Liste:" << endl;
   liste.visit_all(ausgabe);

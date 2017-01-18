@@ -1,34 +1,45 @@
 #include <stdlib.h>
 #include <string.h>
+#include <iostream>
 
 #include "LinkedList.h"
 #include "ListIterator.h"
+#include "Iterator.h"
 
 using namespace pk2;
   
 /* Erzeugt eine leere Liste. */
-LinkedList::LinkedList() {
+LinkedList::LinkedList()
+{
   first = nullptr;
   last = nullptr;
-  
-  iterator = new ListIterator(this);
 }
 
-LinkedList::~LinkedList() {
+LinkedList::~LinkedList()
+{
   while(LinkedList::remove(0) != -1);
 }
 
-LinkedList::LinkedList(const LinkedList& list) {
+LinkedList::LinkedList(const LinkedList& list)
+{
+  first = nullptr;
+  last = nullptr;
+  
   int pos = 0;
-  char* tmp;
-  while((tmp = (char*) list.get(pos)) != nullptr)
+  const char* tmp;
+  while((tmp = (const char*) list.get(pos)) != nullptr)
   {
     size_t keylen = strlen(tmp);
     char* tmp2 = (char *) malloc(keylen*sizeof(char));
-    strcpy(tmp, tmp2);
-    LinkedList::append(tmp2);
+    strcpy(tmp2, tmp);
+    append(tmp2);
     pos++;
   }
+}
+
+Iterator* LinkedList::iterator()
+{
+  return new ListIterator(this);
 }
 
 /* Fuegt den Text (in konstanter Zeit) an der letzten */
@@ -39,7 +50,7 @@ int LinkedList::append(const char* text)
 {
   Eminem* tmp = new Eminem(text);
   
-  if(tmp)//was object created?
+  if(tmp)//was an object created?
   {
     if(last)
     {
@@ -204,10 +215,9 @@ int LinkedList::index_of(const char* text) const
 /* Element die Funktion work auf. */
 void LinkedList::visit_all(void (*work)(const char* t))
 {
-  Eminem* iterator = LinkedList::first;
-  while(iterator)
+  Iterator* iter = iterator();
+  while(iter->hasNext())
   {
-    work(iterator->get_text());
-    iterator = iterator->get_next();
+    work(iter->next());
   }
 }
