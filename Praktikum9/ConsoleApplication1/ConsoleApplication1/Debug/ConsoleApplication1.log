@@ -1,0 +1,88 @@
+﻿Der Buildvorgang wurde am 23.11.2016 12:57:37 gestartet.
+     1>Projekt "H:\linux\Desktop\PK2P\Praktikum9\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.vcxproj" auf Knoten "2", Build Ziel(e).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\ConsoleApplication1.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt LinkedList.cpp ListIterator.cpp main.cpp
+         main.cpp
+     1>h:\linux\desktop\pk2p\praktikum9\consoleapplication1\consoleapplication1\main.cpp(1): warning C4627: "#include <iostream>": Wird bei der Suche nach Verwendung des vorkompilierten Headers übersprungen.
+                 "stdafx.h" Direktive hinzufügen oder vorkompilierten Header erneut erstellen
+     1>h:\linux\desktop\pk2p\praktikum9\consoleapplication1\consoleapplication1\main.cpp(3): warning C4627: "#include "LinkedList.h"": Wird bei der Suche nach Verwendung des vorkompilierten Headers übersprungen.
+                 "stdafx.h" Direktive hinzufügen oder vorkompilierten Header erneut erstellen
+     1>h:\linux\desktop\pk2p\praktikum9\consoleapplication1\consoleapplication1\main.cpp(6): error C2871: 'pk2': Es ist kein Namespace mit diesem Namen vorhanden
+     1>h:\linux\desktop\pk2p\praktikum9\consoleapplication1\consoleapplication1\main.cpp(9): error C2039: 'cout': Ist kein Element von 'std'
+     1>h:\linux\desktop\pk2p\praktikum9\consoleapplication1\consoleapplication1\main.cpp(9): error C2065: 'cout': nichtdeklarierter Bezeichner
+     1>h:\linux\desktop\pk2p\praktikum9\consoleapplication1\consoleapplication1\main.cpp(9): error C2039: 'endl': Ist kein Element von 'std'
+     1>h:\linux\desktop\pk2p\praktikum9\consoleapplication1\consoleapplication1\main.cpp(9): error C2065: 'endl': nichtdeklarierter Bezeichner
+     1>h:\linux\desktop\pk2p\praktikum9\consoleapplication1\consoleapplication1\main.cpp(16): error C2065: 'LinkedList': nichtdeklarierter Bezeichner
+     1>h:\linux\desktop\pk2p\praktikum9\consoleapplication1\consoleapplication1\main.cpp(16): error C2146: Syntaxfehler: Fehlendes ';' vor Bezeichner 'liste'
+     1>h:\linux\desktop\pk2p\praktikum9\consoleapplication1\consoleapplication1\main.cpp(16): error C2065: 'liste': nichtdeklarierter Bezeichner
+     1>h:\linux\desktop\pk2p\praktikum9\consoleapplication1\consoleapplication1\main.cpp(17): error C2065: 'liste': nichtdeklarierter Bezeichner
+     1>h:\linux\desktop\pk2p\praktikum9\consoleapplication1\consoleapplication1\main.cpp(17): error C2228: Links von ".append" muss sich eine Klasse/Struktur/Union befinden.
+                 Typ ist 'unknown-type'
+     1>h:\linux\desktop\pk2p\praktikum9\consoleapplication1\consoleapplication1\main.cpp(18): error C2065: 'liste': nichtdeklarierter Bezeichner
+     1>h:\linux\desktop\pk2p\praktikum9\consoleapplication1\consoleapplication1\main.cpp(18): error C2228: Links von ".insert" muss sich eine Klasse/Struktur/Union befinden.
+                 Typ ist 'unknown-type'
+     1>h:\linux\desktop\pk2p\praktikum9\consoleapplication1\consoleapplication1\main.cpp(19): error C2065: 'LinkedList': nichtdeklarierter Bezeichner
+     1>h:\linux\desktop\pk2p\praktikum9\consoleapplication1\consoleapplication1\main.cpp(19): error C2146: Syntaxfehler: Fehlendes ';' vor Bezeichner 'liste2'
+     1>h:\linux\desktop\pk2p\praktikum9\consoleapplication1\consoleapplication1\main.cpp(19): error C2065: 'liste2': nichtdeklarierter Bezeichner
+     1>h:\linux\desktop\pk2p\praktikum9\consoleapplication1\consoleapplication1\main.cpp(19): error C2065: 'liste': nichtdeklarierter Bezeichner
+     1>h:\linux\desktop\pk2p\praktikum9\consoleapplication1\consoleapplication1\main.cpp(21): error C2065: 'cout': nichtdeklarierter Bezeichner
+     1>h:\linux\desktop\pk2p\praktikum9\consoleapplication1\consoleapplication1\main.cpp(21): error C2065: 'endl': nichtdeklarierter Bezeichner
+     1>h:\linux\desktop\pk2p\praktikum9\consoleapplication1\consoleapplication1\main.cpp(22): error C2065: 'liste': nichtdeklarierter Bezeichner
+     1>h:\linux\desktop\pk2p\praktikum9\consoleapplication1\consoleapplication1\main.cpp(22): error C2228: Links von ".visit_all" muss sich eine Klasse/Struktur/Union befinden.
+                 Typ ist 'unknown-type'
+     1>h:\linux\desktop\pk2p\praktikum9\consoleapplication1\consoleapplication1\main.cpp(23): error C2065: 'liste': nichtdeklarierter Bezeichner
+     1>h:\linux\desktop\pk2p\praktikum9\consoleapplication1\consoleapplication1\main.cpp(23): error C2228: Links von ".remove" muss sich eine Klasse/Struktur/Union befinden.
+                 Typ ist 'unknown-type'
+     1>h:\linux\desktop\pk2p\praktikum9\consoleapplication1\consoleapplication1\main.cpp(25): error C2065: 'cout': nichtdeklarierter Bezeichner
+     1>h:\linux\desktop\pk2p\praktikum9\consoleapplication1\consoleapplication1\main.cpp(25): error C2065: 'endl': nichtdeklarierter Bezeichner
+     1>h:\linux\desktop\pk2p\praktikum9\consoleapplication1\consoleapplication1\main.cpp(26): error C2065: 'liste': nichtdeklarierter Bezeichner
+     1>h:\linux\desktop\pk2p\praktikum9\consoleapplication1\consoleapplication1\main.cpp(26): error C2228: Links von ".visit_all" muss sich eine Klasse/Struktur/Union befinden.
+                 Typ ist 'unknown-type'
+     1>h:\linux\desktop\pk2p\praktikum9\consoleapplication1\consoleapplication1\main.cpp(28): error C2065: 'cout': nichtdeklarierter Bezeichner
+     1>h:\linux\desktop\pk2p\praktikum9\consoleapplication1\consoleapplication1\main.cpp(28): error C2065: 'endl': nichtdeklarierter Bezeichner
+     1>h:\linux\desktop\pk2p\praktikum9\consoleapplication1\consoleapplication1\main.cpp(29): error C2065: 'liste2': nichtdeklarierter Bezeichner
+     1>h:\linux\desktop\pk2p\praktikum9\consoleapplication1\consoleapplication1\main.cpp(29): error C2228: Links von ".visit_all" muss sich eine Klasse/Struktur/Union befinden.
+                 Typ ist 'unknown-type'
+         ListIterator.cpp
+     1>h:\linux\desktop\pk2p\praktikum9\consoleapplication1\consoleapplication1\listiterator.cpp(1): warning C4627: "#include "ListIterator.h"": Wird bei der Suche nach Verwendung des vorkompilierten Headers übersprungen.
+                 "stdafx.h" Direktive hinzufügen oder vorkompilierten Header erneut erstellen
+     1>h:\linux\desktop\pk2p\praktikum9\consoleapplication1\consoleapplication1\listiterator.cpp(4): error C2871: 'pk2': Es ist kein Namespace mit diesem Namen vorhanden
+     1>h:\linux\desktop\pk2p\praktikum9\consoleapplication1\consoleapplication1\listiterator.cpp(9): error C2653: 'ListIterator': Keine Klasse oder Namespace
+     1>h:\linux\desktop\pk2p\praktikum9\consoleapplication1\consoleapplication1\listiterator.cpp(10): error C2653: 'ListIterator': Keine Klasse oder Namespace
+     1>h:\linux\desktop\pk2p\praktikum9\consoleapplication1\consoleapplication1\listiterator.cpp(10): error C2065: 'list': nichtdeklarierter Bezeichner
+     1>h:\linux\desktop\pk2p\praktikum9\consoleapplication1\consoleapplication1\listiterator.cpp(10): error C2228: Links von ".get" muss sich eine Klasse/Struktur/Union befinden.
+                 Typ ist 'unknown-type'
+     1>h:\linux\desktop\pk2p\praktikum9\consoleapplication1\consoleapplication1\listiterator.cpp(10): error C2065: 'pos': nichtdeklarierter Bezeichner
+     1>h:\linux\desktop\pk2p\praktikum9\consoleapplication1\consoleapplication1\listiterator.cpp(14): error C2653: 'ListIterator': Keine Klasse oder Namespace
+     1>h:\linux\desktop\pk2p\praktikum9\consoleapplication1\consoleapplication1\listiterator.cpp(15): error C2653: 'ListIterator': Keine Klasse oder Namespace
+     1>h:\linux\desktop\pk2p\praktikum9\consoleapplication1\consoleapplication1\listiterator.cpp(15): error C2065: 'list': nichtdeklarierter Bezeichner
+     1>h:\linux\desktop\pk2p\praktikum9\consoleapplication1\consoleapplication1\listiterator.cpp(15): error C2228: Links von ".get" muss sich eine Klasse/Struktur/Union befinden.
+                 Typ ist 'unknown-type'
+     1>h:\linux\desktop\pk2p\praktikum9\consoleapplication1\consoleapplication1\listiterator.cpp(15): error C2065: 'pos': nichtdeklarierter Bezeichner
+     1>h:\linux\desktop\pk2p\praktikum9\consoleapplication1\consoleapplication1\listiterator.cpp(17): error C2653: 'ListIterator': Keine Klasse oder Namespace
+     1>h:\linux\desktop\pk2p\praktikum9\consoleapplication1\consoleapplication1\listiterator.cpp(17): error C2065: 'pos': nichtdeklarierter Bezeichner
+         LinkedList.cpp
+     1>h:\linux\desktop\pk2p\praktikum9\consoleapplication1\consoleapplication1\linkedlist.cpp(1): warning C4627: "#include <stdlib.h>": Wird bei der Suche nach Verwendung des vorkompilierten Headers übersprungen.
+                 "stdafx.h" Direktive hinzufügen oder vorkompilierten Header erneut erstellen
+     1>h:\linux\desktop\pk2p\praktikum9\consoleapplication1\consoleapplication1\linkedlist.cpp(2): warning C4627: "#include <string.h>": Wird bei der Suche nach Verwendung des vorkompilierten Headers übersprungen.
+                 "stdafx.h" Direktive hinzufügen oder vorkompilierten Header erneut erstellen
+     1>h:\linux\desktop\pk2p\praktikum9\consoleapplication1\consoleapplication1\linkedlist.cpp(4): warning C4627: "#include "LinkedList.h"": Wird bei der Suche nach Verwendung des vorkompilierten Headers übersprungen.
+                 "stdafx.h" Direktive hinzufügen oder vorkompilierten Header erneut erstellen
+     1>h:\linux\desktop\pk2p\praktikum9\consoleapplication1\consoleapplication1\linkedlist.cpp(5): warning C4627: "#include "ListIterator.h"": Wird bei der Suche nach Verwendung des vorkompilierten Headers übersprungen.
+                 "stdafx.h" Direktive hinzufügen oder vorkompilierten Header erneut erstellen
+     1>h:\linux\desktop\pk2p\praktikum9\consoleapplication1\consoleapplication1\linkedlist.cpp(8): error C2871: 'pk2': Es ist kein Namespace mit diesem Namen vorhanden
+     1>h:\linux\desktop\pk2p\praktikum9\consoleapplication1\consoleapplication1\linkedlist.cpp(12): error C2653: 'LinkedList': Keine Klasse oder Namespace
+     1>h:\linux\desktop\pk2p\praktikum9\consoleapplication1\consoleapplication1\linkedlist.cpp(12): error C4430: Fehlender Typspezifizierer - int wird angenommen. Hinweis: "default-int" wird von C++ nicht unterstützt.
+     1>h:\linux\desktop\pk2p\praktikum9\consoleapplication1\consoleapplication1\linkedlist.cpp(13): error C2653: 'LinkedList': Keine Klasse oder Namespace
+     1>h:\linux\desktop\pk2p\praktikum9\consoleapplication1\consoleapplication1\linkedlist.cpp(13): error C2065: 'first': nichtdeklarierter Bezeichner
+     1>h:\linux\desktop\pk2p\praktikum9\consoleapplication1\consoleapplication1\linkedlist.cpp(14): error C2653: 'LinkedList': Keine Klasse oder Namespace
+     1>h:\linux\desktop\pk2p\praktikum9\consoleapplication1\consoleapplication1\linkedlist.cpp(14): error C2065: 'last': nichtdeklarierter Bezeichner
+     1>h:\linux\desktop\pk2p\praktikum9\consoleapplication1\consoleapplication1\linkedlist.cpp(15): warning C4508: 'LinkedList': Funktion sollte einen Wert zurückgeben; Ergebnistyp 'void' angenommen
+     1>h:\linux\desktop\pk2p\praktikum9\consoleapplication1\consoleapplication1\linkedlist.cpp(17): error C2653: 'LinkedList': Keine Klasse oder Namespace
+     1>h:\linux\desktop\pk2p\praktikum9\consoleapplication1\consoleapplication1\linkedlist.cpp(17): fatal error C1903: Weiterverarbeitung nach vorherigem Fehler nicht möglich; Kompilierung wird abgebrochen.
+         Code wird generiert...
+     1>Die Erstellung des Projekts "H:\linux\Desktop\PK2P\Praktikum9\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.vcxproj" ist abgeschlossen, Build Ziel(e) -- FEHLER.
+
+Fehler beim Buildvorgang.
+
+Verstrichene Zeit 00:00:00.54
