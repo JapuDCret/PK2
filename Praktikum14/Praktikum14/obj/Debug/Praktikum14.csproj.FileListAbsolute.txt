@@ -1,0 +1,6 @@
+\\fb4.fh\storage\stud\makie003\eigene dateien\visual studio 2013\Projects\Praktikum14\Praktikum14\bin\Debug\Praktikum14.exe.config
+\\fb4.fh\storage\stud\makie003\eigene dateien\visual studio 2013\Projects\Praktikum14\Praktikum14\bin\Debug\Praktikum14.exe
+\\fb4.fh\storage\stud\makie003\eigene dateien\visual studio 2013\Projects\Praktikum14\Praktikum14\bin\Debug\Praktikum14.pdb
+\\fb4.fh\storage\stud\makie003\eigene dateien\visual studio 2013\Projects\Praktikum14\Praktikum14\obj\Debug\Praktikum14.csprojResolveAssemblyReference.cache
+\\fb4.fh\storage\stud\makie003\eigene dateien\visual studio 2013\Projects\Praktikum14\Praktikum14\obj\Debug\Praktikum14.exe
+\\fb4.fh\storage\stud\makie003\eigene dateien\visual studio 2013\Projects\Praktikum14\Praktikum14\obj\Debug\Praktikum14.pdb
