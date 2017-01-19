@@ -1,32 +1,23 @@
-#ifndef LINKEDLIST_H_
-#define LINKEDLIST_H_
-
 #include "Eminem.h"
-#include "Iterator.h"
 
 namespace pk2 {
-  class LinkedList {
+  template<class T>
+  class LinkedList
+  {
   private:
     Eminem* first;
     Eminem* last;
-    Iterator* iterator;
   
   public:
     /* Erzeugt eine leere Liste. */
     LinkedList();
-
-    /* Copy Konstruktor */
-    LinkedList(const LinkedList& list);
-  
-    /* Dekonstruktor */
-    ~LinkedList();
   
   
     /* Fuegt den Text (in konstanter Zeit) an der letzten */
     /* Listenposition hinzu. */
     /* Liefert den Wert 1, wenn das Element eingefuegt werden */
     /* konnte. Ansonsten wird der Wert 0 geliefert. */
-    int append(const char* text);
+    int append(T text);
   
   
     /* Fuegt ein neues Element an der Position p ein. */
@@ -36,7 +27,7 @@ namespace pk2 {
     /* wird nach rechts geschoben. */
     /* Falls sich weniger als p Elemente in der Liste befinden, */
     /* wird der Text am Ende angefuegt. */
-    int insert(const char* text, int p);
+    int insert(T text, int p);
   
   
     /* Loescht das Element an der Position p. Das erste */
@@ -51,32 +42,26 @@ namespace pk2 {
     /* Das erste Listenelement befindet sich an der Position 0. */
     /* Falls das p-te Element nicht existiert, wird nullptr */
     /* geliefert. */
-    const char* get(int p) const;
+    T get(int p);
     
     
     /* Berechnet den Index des ersten Elements, das den Text */
     /* text enthaelt. Falls kein Element den gesuchten Text */
     /* enthaelt, wird -1 geliefert. */
-    int index_of(const char* text) const;
+    int index_of(T);
     
     
     /* Liefert den Text des ersten Elements der Liste (in */
     /* konstanter Zeit). */
-    const char* get_first() const { return first->get_text(); }
+    T get_first() const { return first->get_text(); }
     
     
     /* Liefert den Text des letzten Elements der Liste (in */
     /* konstanter Zeit). */
-    const char* get_last() const { return last->get_text(); };
+    T get_last() const { return last->get_text(); };
     
     
     /* Besucht alle Elemente der Liste und ruft fuer jedes */
     /* Element die Funktion work auf. */
-    void visit_all(void (*work)(const char* t));
-    
-    /* Erzeugt einen Iterator */
-    Iterator* getIterator() { return iterator; };
-  };
+    void visit_all(void (*work)(T));  };
 }
-
-#endif

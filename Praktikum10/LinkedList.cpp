@@ -1,35 +1,14 @@
-#include <stdlib.h>
-#include <string.h>
-
 #include "LinkedList.h"
-#include "ListIterator.h"
 
 using namespace pk2;
   
+  
 /* Erzeugt eine leere Liste. */
 LinkedList::LinkedList() {
-  first = nullptr;
-  last = nullptr;
-  
-  iterator = new ListIterator(this);
+  LinkedList::first = nullptr;
+  LinkedList::last = nullptr;
 }
 
-LinkedList::~LinkedList() {
-  while(LinkedList::remove(0) != -1);
-}
-
-LinkedList::LinkedList(const LinkedList& list) {
-  int pos = 0;
-  char* tmp;
-  while((tmp = (char*) list.get(pos)) != nullptr)
-  {
-    size_t keylen = strlen(tmp);
-    char* tmp2 = (char *) malloc(keylen*sizeof(char));
-    strcpy(tmp, tmp2);
-    LinkedList::append(tmp2);
-    pos++;
-  }
-}
 
 /* Fuegt den Text (in konstanter Zeit) an der letzten */
 /* Listenposition hinzu. */
@@ -146,7 +125,7 @@ int LinkedList::remove(int p)
 /* Das erste Listenelement befindet sich an der Position 0. */
 /* Falls das p-te Element nicht existiert, wird nullptr */
 /* geliefert. */
-const char* LinkedList::get(int p) const
+const char* LinkedList::get(int p)
 {
   int counter = 0;
   Eminem* iterator = LinkedList::first;
@@ -182,7 +161,7 @@ int compare(const char* str1, const char* str2)
 /* Berechnet den Index des ersten Elements, das den Text */
 /* text enthaelt. Falls kein Element den gesuchten Text */
 /* enthaelt, wird -1 geliefert. */
-int LinkedList::index_of(const char* text) const
+int LinkedList::index_of(const char* text)
 {
   int counter = 0;
   Eminem* iterator = LinkedList::first;
