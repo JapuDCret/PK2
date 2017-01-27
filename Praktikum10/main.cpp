@@ -1,106 +1,119 @@
-#include <stdio.h>
-#include "LinkedList.h"
+#include <iostream>
+#include <string>
+#include "Linkedlist.h"
+#include "Linkedlist.cpp"
+
+using namespace std;
 using namespace pk2;
 
-void print_values(LinkedList* list, int max_size);
-void delete_values(LinkedList* list, int max_size);
-void test_work(const char* str);
+
+template<class T>
+void print_values(LinkedList<T>* list, int max_size)
+{
+	int i;
+	for(i=0; i < max_size; i++)
+	{
+		T* content = list->get(i);
+		cout << "get at " << i << ", result: ";
+		if(content)
+			cout << (*content);
+		else
+			cout << "null";
+		cout << endl;
+	}
+}
+
+template<class T>
+void delete_values(LinkedList<T>* list, int max_size)
+{
+	int i;
+	for(i=max_size; i > 0; i--)
+	{
+		cout << "deleting at " << i-1 << ", result: " << list->remove(i-1) << endl;
+	}
+}
+
+void test_work(string* content)
+{
+	if(content)
+		cout << (*content);
+	else
+		cout << "null";
+	cout << ", ";
+}
 
 int main(void)
 {
-  printf("Starting...\n\n");
-  
-  LinkedList* list = new LinkedList();
-  
-  //printf("first: %s\n", list->get_first());
-  //printf("last: %s\n", list->get_last());
-  
-  const char* str1 = "abc";
-  printf("appending '%s', return: %d\n", str1, list->append(str1));
-  printf("first: %s\n", list->get_first());
-  printf("last: %s\n", list->get_last());
-  
-  const char* str2 = "xyz";
-  printf("appending '%s', return: %d\n", str2, list->append(str2));
-  printf("first: %s\n", list->get_first());
-  printf("last: %s\n", list->get_last());
-  
-  const char* str3 = "123";
-  printf("appending '%s', return: %d\n", str3, list->append(str3));
-  printf("first: %s\n", list->get_first());
-  printf("last: %s\n", list->get_last());
-  
-  printf("indexof '%s', return: %d\n", str1, list->index_of(str1));
-  printf("indexof '%s', return: %d\n", str2, list->index_of(str2));
-  printf("indexof '%s', return: %d\n", str3, list->index_of(str3));
-  
-  print_values(list, 5);
-  
-  const char* str4 = "mmm";
-  int pos4 = 1;
-  printf("inserting '%s' at %d, return: %d\n", str4, pos4, list->insert(str4, pos4));
-  printf("first: %s\n", list->get_first());
-  printf("last: %s\n", list->get_last());
-  
-  printf("indexof '%s', return: %d\n", str1, list->index_of(str1));
-  printf("indexof '%s', return: %d\n", str2, list->index_of(str2));
-  printf("indexof '%s', return: %d\n", str3, list->index_of(str3));
-  printf("indexof '%s', return: %d\n", str4, list->index_of(str4));
-  
-  print_values(list, 5);
-  
-  printf("executing test_work..\n");
-  printf("Result: ");
-  list->visit_all(&test_work);
-  printf("\n");
-  
-  print_values(list, 5);
-  
-  printf("deleting at %d, result: %d\n", pos4, list->remove(pos4));
-  
-  printf("executing test_work..\n");
-  printf("Result: ");
-  list->visit_all(&test_work);
-  printf("\n");
-  
-  delete_values(list, 5);
-  
-  print_values(list, 5);
-  
-  printf("executing test_work..\n");
-  printf("Result: ");
-  list->visit_all(&test_work);
-  printf("\n");
-  
-  print_values(list, 5);
-  
-  delete_values(list, 5);
-  
-  print_values(list, 5);
-  
-  printf("Stopping...\n");
-  return 0;
-}
-
-void print_values(LinkedList* list, int max_size)
-{
-    int i;
-    for(i=0; i < max_size; i++)
-    {
-      printf("get at %d, result: %s\n", i, list->get(i));
-    }
-}
-
-void delete_values(LinkedList* list, int max_size)
-{
-    int i;
-    for(i=max_size; i > 0; i--)
-    {
-      printf("deleting at %d, result: %d\n", i-1, list->remove(i-1));
-    }
-}
-
-void test_work(const char* str)
-{
-  printf("%s, ", str);
+	cout << "Starting..." << endl << endl;
+	
+	LinkedList<string>* list = new LinkedList<string>();
+	
+	//cout << "first: %s\n", list->get_first());
+	//cout << "last: %s\n", list->get_last());
+	
+	string* str1 = new string("abc");
+	cout << "appending '" << (*str1) << "', return: " << list->append(str1) << endl;
+	cout << "first: " << (*list->get_first()) << endl;
+	cout << "last: " << (*list->get_last()) << endl;
+	
+	string* str2 = new string("xyz");
+	cout << "appending '" << (*str2) << "', return: " << list->append(str2) << endl;
+	cout << "first: " << (*list->get_first()) << endl;
+	cout << "last: " << (*list->get_last()) << endl;
+	
+	string* str3 = new string("123");
+	cout << "appending '" << (*str3) << "', return: " << list->append(str3) << endl;
+	cout << "first: " << (*list->get_first()) << endl;
+	cout << "last: " << (*list->get_last()) << endl;
+	
+	cout << "indexof '" << (*str1) << "', return: " << list->index_of(str1) << endl;
+	cout << "indexof '" << (*str2) << "', return: " << list->index_of(str2) << endl;
+	cout << "indexof '" << (*str3) << "', return: " << list->index_of(str3) << endl;
+	
+	print_values(list, 5);
+	
+	string* str4 = new string("mmm");
+	int pos4 = 1;
+	cout << "inserting '" << (*str4) << "' at " << pos4 << ", return: " << list->insert(str4, pos4) << endl;
+	cout << "first: " << (*list->get_first()) << endl;
+	cout << "last: " << (*list->get_last()) << endl;
+	
+	cout << "indexof '" << (*str1) << "', return: " << list->index_of(str1) << endl;
+	cout << "indexof '" << (*str2) << "', return: " << list->index_of(str2) << endl;
+	cout << "indexof '" << (*str3) << "', return: " << list->index_of(str3) << endl;
+	cout << "indexof '" << (*str4) << "', return: " << list->index_of(str4) << endl;
+	
+	print_values(list, 5);
+	
+	cout << "executing test_work..\n" << endl;
+	cout << "Result: ";
+	list->visit_all(&test_work);
+	cout << endl;
+	
+	print_values(list, 5);
+	
+	cout << "deleting at " << pos4 << ", result: " << list->remove(pos4) << endl;
+	
+	cout << "executing test_work.." << endl;
+	cout << "Result: ";
+	list->visit_all(&test_work);
+	cout << endl;
+	
+	delete_values(list, 5);
+	
+	print_values(list, 5);
+	
+	cout << "executing test_work.." << endl;
+	cout << "Result: ";
+	list->visit_all(&test_work);
+	cout << endl;
+	
+	print_values(list, 5);
+	
+	delete_values(list, 5);
+	
+	print_values(list, 5);
+	
+	cout << "Stopping..." << endl;
+	return 0;
 }
