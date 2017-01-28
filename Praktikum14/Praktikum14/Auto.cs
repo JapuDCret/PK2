@@ -11,8 +11,8 @@ namespace Praktikum14
         public string hersteller;
         public int baujahr
         {
-            get { return baujahr; }
-            set { baujahr = value; }
+            get;
+            set;
         }
 
         public Auto(string hersteller, int baujahr)

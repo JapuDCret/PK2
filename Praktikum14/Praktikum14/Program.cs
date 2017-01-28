@@ -37,27 +37,18 @@ namespace Praktikum14
             {
                 Console.WriteLine("Element: {0}", iter2.next());
             }
-
-
-            Console.WriteLine("debug 0");
-            Console.WriteLine("debug {0} - {1}", 1, 2);
+            
 
             Fuhrpark fuhrpark = new Fuhrpark();
 
-            Console.WriteLine("debug 1");
-
             Auto a1 = new Auto("Tesla", 2010);
             fuhrpark.Aufnehmen(a1);
-            /**
             Auto a2 = new Auto("Mitsubishi", 1999);
             fuhrpark.Aufnehmen(a2);
             Auto a3 = new Auto("Honda", 2000);
             fuhrpark.Aufnehmen(a3);
             Auto a4 = new Auto("Toyota", 1997);
             fuhrpark.Aufnehmen(a4);
-             * **/
-
-            Console.WriteLine("debug 2");
 
             fuhrpark.Inventur();
 
