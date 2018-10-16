@@ -248,14 +248,18 @@ Response-Body:
 				"name": "EasyJet Application",
 				"type": "APPLICATION",
 				"status": "ONLINE",
-				"detailedStatus": "ONLINE"
+				"detailedStatus": "ONLINE",
+				"additionalStatus": null,
+				"reasonStatus": ""
 			 },
 			"AIRCANADA-APP": {
 				"id": "AIRCANADA-APP",
 				"name": "AirCanada Application",
 				"type": "APPLICATION",
 				"status": "OFFLINE",
-				"detailedStatus": "TIMEOUT"
+				"detailedStatus": "TIMEOUT",
+				"additionalStatus": null,
+				"reasonStatus": ""
 			}
 		},
 		"PLATFORM": {
@@ -264,7 +268,9 @@ Response-Body:
 				"name": "Materna Platform 4.xx",
 				"type": "PLATFORM",
 				"status": "OK",
-				"detailedStatus": "OK"
+				"detailedStatus": "OK",
+				"additionalStatus": null,
+				"reasonStatus": ""
 			}
 		},
 		"PRINTER": {
@@ -273,7 +279,9 @@ Response-Body:
 				"name": "Fujitsu 9870 GPP",
 				"type": "PRINTER",
 				"status": "ERROR",
-				"detailedStatus": "PAPER_JAM"
+				"detailedStatus": "PAPER_JAM",
+				"additionalStatus": null,
+				"reasonStatus": "Paper is jammed"
 			}
 		}
 	}
@@ -313,7 +321,7 @@ Request-Body:
 ```json
 {
 	"kioskId": "3",
-	"command": "STOP"
+	"command": "SHUTDOWN"
 }
 ```
 
@@ -348,7 +356,7 @@ Request-Body:
 {
 	"kioskId": "3",
 	"applicationId": "EASYJET-APP",
-	"command": "STOP"
+	"command": "SHUTDOWN"
 }
 ```
 
@@ -369,7 +377,6 @@ Pass the following properties inside the HTTP-Body of the POST request:
 |Property|Type|Description|
 |--|--|--|
 |*kioskId*|Long|Identifier of a specific Kiosk.|
-|*platformId*|String|Identifier of the platform on this Kiosk.|
 |*command*|String|The Command that should be executed.|
 
 #### Response
@@ -382,8 +389,7 @@ Request-Body:
 ```json
 {
 	"kioskId": "3",
-	"applicationId": "MAT_PLF",
-	"command": "STOP"
+	"command": "SHUTDOWN"
 }
 ```
 
@@ -413,6 +419,7 @@ The response is a JSON array of InterventionPlain objects with the following pro
 |*kioskId*|Long|Identifier of the associated Kiosk.|
 |*title*|String|A short Title to the Intervention.|
 |*severity*|String|Severity of this Intervention (e.g. LOW, NORMAL, HIGH, URGENT).|
+|*creationDate*|Long|Moment, when the Intervention was created, as Unix time (in milliseconds since epoch).|
 |*resolved*|Boolean|Displays whether or not this Intervention has been resolved.|
 |*asignee*|String|Username of the User that this Intervention has been asigned to.|
 
@@ -426,6 +433,7 @@ Response-Body:
 		"kioskId": 3,
 		"title": "Kiosk 3 requires assistance",
 		"severity": "HIGH",
+		"creationDate": 1539668211387,
 		"resolved": false,
 		"asignee": "pzwegat"
 	},
@@ -434,6 +442,7 @@ Response-Body:
 		"kioskId": 1,
 		"title": "Kiosk 1 requires hardware assistance",
 		"severity": "URGENT",
+		"creationDate": 1539668222979,
 		"resolved": true,
 		"asignee": "pzwegat"
 	}
@@ -460,10 +469,11 @@ The response is a InterventionDetailed object with the following properties:
 |*kioskId*|Long|Identifier of the associated Kiosk.|
 |*title*|String|A short Title to the Intervention.|
 |*severity*|String|Severity of this Intervention (e.g. LOW, NORMAL, HIGH, URGENT).|
+|*creationDate*|Long|Moment, when the Intervention was created, as Unix time (in milliseconds since epoch).|
 |*resolved*|Boolean|Displays whether or not this Intervention has been resolved.|
 |*asignee*|String|Username of the User that this Intervention has been asigned to.|
 |*asigner*|String|Username of the User that assigned this Intervention to a User.|
-|*details*|String|Further details to the Intervention.|
+|*description*|String|Further details to the Intervention.|
 |*additionalInfo*|Map<String, Object>|Map with additional Information (intended for future use).|
 
 Example query: 
@@ -475,9 +485,11 @@ Response-Body:
 	"kioskId": 3,
 	"title": "Kiosk 3 requires assistance",
 	"severity": "HIGH",
+	"creationDate": 1539668211387,
+	"resolved": true,
 	"asignee": "pzwegat",
 	"asigner": "admin",
-	"details": "Customer at Kiosk 3 reported a mismatch of submitted and displayed bags",
+	"description": "Customer at Kiosk 3 reported a mismatch of submitted and displayed bags",
 	"additionalInfo": {}
 }
 ```
@@ -504,6 +516,7 @@ The request is an InterventionDetailed object with the following properties:
 |*kioskId*|Long|(cannot be modified) Identifier of the associated Kiosk.|
 |*title*|String|(Optional) A short Title to the Intervention.|
 |*severity*|String|(Optional) Severity of this Intervention (e.g. LOW, NORMAL, HIGH, URGENT).|
+|*creationDate*|Long|(cannot be modified) Moment, when the Intervention was created, as Unix time (in milliseconds since epoch).|
 |*resolved*|Boolean|(Optional) Displays whether or not this Intervention has been resolved.|
 |*asignee*|String|(Optional) Username of the User that this Intervention has been asigned to.|
 |*asigner*|String|(cannot be modified) Username of the User that assigned this Intervention to a User.|
